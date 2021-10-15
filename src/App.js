@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react'
+import Navbar from './Components/Navbar.js';
+import TextForm from './Components/TextForm.js';
+import LoadingBar from 'react-top-loading-bar'
 
-function App() {
+
+const App = (props) => {
+  const [progress, setProgress] = useState(0)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="main_div">
+      <LoadingBar height={3} color='#f11946' progress={progress} />
+      <Navbar/>
+      <TextForm setProgress={setProgress}/>
     </div>
+      </>
+
   );
 }
 
