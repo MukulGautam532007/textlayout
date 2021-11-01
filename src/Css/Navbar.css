@@ -26,16 +26,46 @@ html{
 .navbar .logo h1 a{
     text-decoration: none;
     color: rgb(255, 0, 0);
-    
 }
 .nav-both-logo{
-    transition: 0.1s all;
-    padding: 0 8px;
+    padding: 8px 10px;
+    position: relative;
+    box-sizing: border-box;
+
+}
+.nav-both-logo::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: 0.3s all;
+    top: 0%;
+    left: 0%;
+}
+.nav-both-logo::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: 0.3s all;
+    bottom: 0%;
+    right: 0%;
 
 }
 
-.nav-both-logo:hover{
- border-left: 5px solid white;   
+.nav-both-logo:hover::before{
+    width: 10%;
+    height: 40%;
+    border-top: 3px solid rgb(255, 255, 255);
+    border-left: 3px solid rgb(255, 255, 255);
+}
+.nav-both-logo:hover::after{
+    width: 10%;
+    height: 40%;
+    border-bottom: 3px solid rgb(255, 0, 0);
+    border-right: 3px solid rgb(255, 0, 0);
 }
 #second-logo{
     color: white;

@@ -4,6 +4,8 @@
 html{
     font-size: 62.5%;
 }
+body{
+}
 
 .text-form{
     display: flex;
@@ -16,14 +18,20 @@ html{
 .text-form h1{
     font-size: 3rem;
     text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
     color: red;
     text-transform: uppercase;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+    user-select: none;
 }
-
+.text-form .heading{
+    padding: 10px 10px;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    user-select: none;
+}
 .text-form textarea{
     min-width: 80vw;
     max-width: 80vw;
@@ -53,10 +61,10 @@ html{
     display: flex;
     justify-content: space-around;
     font-family: 'Noto Sans Mono', monospace;
+    user-select: none;
+
 }
 .text_form_button{
-    /* color: white; */
-    /* border: 1px solid white; */
     border: 1px solid hsl(0, 0%, 18.82%);
     background-color: #323232;
     color: white;
@@ -68,6 +76,7 @@ html{
     box-shadow: -2px 2px 22px -3px #000000c2;
     -webkit-box-shadow: -2px 2px 22px -3px rgba(22, 14, 14, 0.76);
     -moz-box-shadow: -2px 2px 22px -3px rgba(0,0,0,0.76);
+    user-select: none;
 }
 
 .text_form_button:hover{
@@ -76,13 +85,16 @@ html{
     border: 1px solid rgb(71, 71, 71);
     
 }
-.output_preview h1{
-    margin-top: 2rem;
+.output_preview{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 .nothing_to_preview{
     font-size: 1.5rem;
     padding: 0 50px;
     text-align: justify;
+    width: 100%;
+    overflow-wrap: break-word;
 }
 
 
@@ -100,6 +112,7 @@ html{
         margin-bottom: 2rem;
     }
 }
+ 
 @media (max-width:825px){
     html{
         font-size: 55%;
@@ -115,6 +128,7 @@ html{
         font-size: 50%;
     }
 }
+
 @media (max-width:480px) {
     .text_form_buttons{
         display: flex;
@@ -131,11 +145,13 @@ html{
         font-size: 45%;
     }
 }
+
 @media (max-width:390px) {
     html{
         font-size: 40%;
     }
 }
+
 @media (max-width:390px) {
     .text_form_button{
         width: 280px;
@@ -153,6 +169,12 @@ html{
         font-size: 35%;
     }
 
+}
+@media (max-width:300px) {
+    .text_form_button{
+        width: 200px;
+        margin-bottom: 2rem;
+    }
 }
 
 

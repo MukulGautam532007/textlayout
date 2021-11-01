@@ -6,13 +6,13 @@ import LoadingBar from 'react-top-loading-bar'
 
 
 const App = (props) => {
-  const [progress, setProgress] = useState(0)
+  const [progress, setprogress] = useState(0)
   return (
     <>
     <div className="main_div">
       <LoadingBar height={3} color='#f11946' progress={progress} />
       <Navbar/>
-      <TextForm setProgress={setProgress}/>
+      <TextForm setprogress={setprogress}/>
     </div>
       </>
 
